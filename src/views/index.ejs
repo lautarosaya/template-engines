@@ -50,7 +50,7 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <% platos.forEach(plato => { %>
           <br />
-          <h4><%= plato.nombre %></h4>
+          <a href="/detalle/<%= plato.id %> "><h4><%= plato.nombre %></h4></a>
           <p class="ps-text-grey">
             <%= plato.descripcion %> <%= plato.precio %>
           </p>

@@ -13,21 +13,22 @@
       <!-- Menu Section -->
       <div class="ps-row ps-padding-64" id="menu">
         <div class="ps-col l6 ps-padding-large">
-          <% if (req.params.id == platos.id) { %>
-          <h1 class="ps-center"><%= platos.nombre %></h1>
+          <% platos.forEach(plato => { %> <% if (id == plato.id) { %>
+
+          <h1 class="ps-center"><%= plato.nombre %></h1>
           <br />
-          <h4><%= platos.descripcion %></h4>
-          <p class="ps-text-grey"><%= platos.precio %></p>
+          <h4><%= plato.descripcion %></h4>
+          <p class="ps-text-grey"><%= plato.precio %></p>
         </div>
 
         <div class="ps-col l6 ps-padding-large ps-img-menu">
           <img
-            src="<%= platos.img %>"
+            src="<%= plato.img %>"
             class="ps-round ps-image ps-opacity-min"
-            alt="<%= platos.alt %> "
+            alt="<%= plato.alt %> "
           />
         </div>
-        <% } %>
+        <% } %> <% }) %>
       </div>
 
       <!-- Footer -->

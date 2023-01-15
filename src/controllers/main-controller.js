@@ -16,7 +16,7 @@ const platos = [
     descripcion: "Risotto de berenjena y queso de cabra",
     precio: "U$S 47.00",
     id: 2,
-    img: "/images/Risoto-berenjena-queso-cabra.jpg",
+    img: "/images/Risotto-berenjena-queso-cabra.jpg",
     alt: "risoto",
   },
 
@@ -45,6 +45,7 @@ module.exports = {
   },
 
   detalle: (req, res) => {
-    res.render("detalleMenu", { platos });
+    const id = req.params.id;
+    res.render("detalleMenu", { platos, id });
   },
 };
